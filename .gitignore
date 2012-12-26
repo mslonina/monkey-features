@@ -1,4 +1,5 @@
 # Ignore configuration files that may contain sensitive information.
+*.tar
 sites/*/*settings*.php
 
 # Ignore paths that contain generated content.
