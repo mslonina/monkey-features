@@ -1,0 +1,16 @@
+name = Monkey Realname
+description = Provides realname for the user accounts
+core = 7.x
+package = Monkey Features
+php = 5.2.4
+version = 7.x-1.0
+project = monkey_realname
+dependencies[] = features
+dependencies[] = realname
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[field][] = user-user-field_name
+features[field][] = user-user-field_surname
+features[variable][] = field_bundle_settings_user__user
+features[variable][] = realname_pattern

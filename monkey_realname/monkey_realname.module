@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Monkey Realname feature.
+ */
+
+include_once 'monkey_realname.features.inc';
