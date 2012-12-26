@@ -1,0 +1,14 @@
+name = Monkey Text Filters
+description = Basic text filters with Markdown and Oembed support
+core = 7.x
+package = Monkey Features
+version = 7.x-1.0
+project = monkey_text_filters
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = markdown
+dependencies[] = oembed
+features[features_api][] = api:1
+features[filter][] = filtered_html
+features[filter][] = full_html
+features[filter][] = plain_text

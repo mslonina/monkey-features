@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Monkey Article feature.
+ */
+
+include_once 'monkey_article.features.inc';
