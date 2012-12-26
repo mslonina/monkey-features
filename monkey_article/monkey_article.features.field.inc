@@ -135,7 +135,7 @@ function monkey_article_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_file',
-      'label' => 'File',
+      'label' => 'Files',
       'required' => 0,
       'settings' => array(
         'description_field' => 1,
@@ -168,6 +168,20 @@ function monkey_article_field_default_fields() {
               'autocomplete' => '1',
             ),
           ),
+          'insert' => 0,
+          'insert_absolute' => 0,
+          'insert_class' => '',
+          'insert_default' => 'auto',
+          'insert_styles' => array(
+            'auto' => 'auto',
+            'icon_link' => 0,
+            'image' => 0,
+            'image_large' => 0,
+            'image_medium' => 0,
+            'image_thumbnail' => 0,
+            'link' => 0,
+          ),
+          'insert_width' => '',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
@@ -234,7 +248,7 @@ function monkey_article_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_image',
-      'label' => 'Image',
+      'label' => 'Images',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
@@ -271,6 +285,20 @@ function monkey_article_field_default_fields() {
               'autocomplete' => '1',
             ),
           ),
+          'insert' => 0,
+          'insert_absolute' => 0,
+          'insert_class' => '',
+          'insert_default' => 'auto',
+          'insert_styles' => array(
+            'auto' => 'auto',
+            'icon_link' => 0,
+            'image' => 0,
+            'image_large' => 0,
+            'image_medium' => 0,
+            'image_thumbnail' => 0,
+            'link' => 0,
+          ),
+          'insert_width' => '',
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
@@ -349,7 +377,7 @@ function monkey_article_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '-4',
+        'weight' => -4,
       ),
     ),
   );
@@ -358,8 +386,8 @@ function monkey_article_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Enter a comma-separated list of words to describe your content.');
-  t('File');
-  t('Image');
+  t('Files');
+  t('Images');
   t('Tags');
   t('Upload an image to go with this article.');
 
