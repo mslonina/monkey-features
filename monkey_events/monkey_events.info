@@ -9,6 +9,7 @@ dependencies[] = ctools
 dependencies[] = date
 dependencies[] = features
 dependencies[] = file
+dependencies[] = galleryformatter
 dependencies[] = image
 dependencies[] = link
 dependencies[] = monkey_article

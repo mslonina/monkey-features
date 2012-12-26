@@ -599,12 +599,17 @@ function monkey_events_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'image',
+          'module' => 'galleryformatter',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => 'medium',
+            'link_to_full' => 1,
+            'link_to_full_style' => '0',
+            'linking_method' => 'show_full_link',
+            'modal' => 'none',
+            'slide_style' => 'galleryformatter_slide',
+            'style' => 'Greenarrows',
+            'thumb_style' => 'galleryformatter_thumb',
           ),
-          'type' => 'image',
+          'type' => 'galleryformatter_default',
           'weight' => '5',
         ),
         'teaser' => array(

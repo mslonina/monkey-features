@@ -9,6 +9,7 @@ dependencies[] = features
 dependencies[] = file
 dependencies[] = filefield_sources
 dependencies[] = filefield_sources_plupload
+dependencies[] = galleryformatter
 dependencies[] = image
 dependencies[] = override_node_options
 dependencies[] = plupload

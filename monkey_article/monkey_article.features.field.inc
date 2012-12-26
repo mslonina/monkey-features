@@ -50,7 +50,7 @@ function monkey_article_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -124,7 +124,7 @@ function monkey_article_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => 11,
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -227,13 +227,18 @@ function monkey_article_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'image',
+          'module' => 'galleryformatter',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => 'large',
+            'link_to_full' => 1,
+            'link_to_full_style' => '0',
+            'linking_method' => 'show_full_link',
+            'modal' => 'none',
+            'slide_style' => 'galleryformatter_slide',
+            'style' => 'Greenarrows',
+            'thumb_style' => 'galleryformatter_thumb',
           ),
-          'type' => 'image',
-          'weight' => -1,
+          'type' => 'galleryformatter_default',
+          'weight' => '-1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -353,7 +358,7 @@ function monkey_article_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 10,
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
