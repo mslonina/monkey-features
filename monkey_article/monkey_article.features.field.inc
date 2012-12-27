@@ -48,7 +48,10 @@ function monkey_article_field_default_fields() {
         'default' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'text_default',
           'weight' => '0',
         ),
@@ -56,6 +59,8 @@ function monkey_article_field_default_fields() {
           'label' => 'hidden',
           'module' => 'text',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
@@ -122,7 +127,10 @@ function monkey_article_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'file',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'file_default',
           'weight' => '11',
         ),
@@ -229,10 +237,12 @@ function monkey_article_field_default_fields() {
           'label' => 'hidden',
           'module' => 'galleryformatter',
           'settings' => array(
+            'field_multiple_limit' => '-1',
+            'field_multiple_limit_offset' => '0',
             'link_to_full' => 1,
             'link_to_full_style' => '0',
-            'linking_method' => 'show_full_link',
-            'modal' => 'none',
+            'linking_method' => 'onclick_full',
+            'modal' => 'colorbox',
             'slide_style' => 'galleryformatter_slide',
             'style' => 'Greenarrows',
             'thumb_style' => 'galleryformatter_thumb',
@@ -244,6 +254,8 @@ function monkey_article_field_default_fields() {
           'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'image_link' => 'content',
             'image_style' => 'medium',
           ),
@@ -356,14 +368,20 @@ function monkey_article_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => 10,
         ),
