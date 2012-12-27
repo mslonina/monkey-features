@@ -49,6 +49,7 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'module' => 'text',
           'settings' => array(
+            'conditions' => array(),
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
           ),
@@ -57,14 +58,9 @@ function monkey_events_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-            'trim_length' => 600,
-          ),
-          'type' => 'text_summary_or_trimmed',
-          'weight' => 0,
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
         ),
       ),
       'entity_type' => 'node',
@@ -88,118 +84,70 @@ function monkey_events_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-event-field_event_cover'.
-  $fields['node-event-field_event_cover'] = array(
+  // Exported field: 'node-event-field_create_image_gallery'.
+  $fields['node-event-field_create_image_gallery'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_event_cover',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
+      'field_name' => 'field_create_image_gallery',
+      'foreign keys' => array(),
       'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
+        'value' => array(
+          0 => 'value',
         ),
       ),
       'locked' => '0',
-      'module' => 'image',
+      'module' => 'list',
       'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
+        'allowed_values' => array(
+          0 => '0',
+          1 => '1',
+        ),
+        'allowed_values_function' => '',
       ),
       'translatable' => '0',
-      'type' => 'image',
+      'type' => 'list_boolean',
     ),
     'field_instance' => array(
       'bundle' => 'event',
+      'default_value' => array(
+        0 => array(
+          'value' => 0,
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-            'image_link' => '',
-            'image_style' => 'medium',
-          ),
-          'type' => 'image',
-          'weight' => '0',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '5',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_event_cover',
-      'label' => 'Cover',
-      'required' => 1,
+      'field_name' => 'field_create_image_gallery',
+      'label' => 'Create image gallery',
+      'required' => 0,
       'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'image',
+        'module' => 'options',
         'settings' => array(
-          'filefield_sources' => array(
-            'filefield_sources' => array(
-              'attach' => 0,
-              'clipboard' => 'clipboard',
-              'plupload' => 'plupload',
-              'reference' => 'reference',
-              'remote' => 'remote',
-            ),
-            'source_attach' => array(
-              'absolute' => '0',
-              'attach_mode' => 'move',
-              'path' => 'file_attach',
-            ),
-            'source_imce' => array(
-              'imce_mode' => 0,
-            ),
-            'source_reference' => array(
-              'autocomplete' => '0',
-            ),
-          ),
-          'insert' => 0,
-          'insert_absolute' => 0,
-          'insert_class' => '',
-          'insert_default' => 'auto',
-          'insert_styles' => array(
-            'auto' => 'auto',
-            'icon_link' => 0,
-            'image' => 0,
-            'image_large' => 0,
-            'image_medium' => 0,
-            'image_thumbnail' => 0,
-            'link' => 0,
-          ),
-          'insert_width' => '',
-          'preview_image_style' => 'thumbnail',
-          'progress_indicator' => 'throbber',
+          'display_label' => 1,
         ),
-        'type' => 'image_image',
-        'weight' => '2',
+        'type' => 'options_onoff',
+        'weight' => '10',
       ),
     ),
   );
@@ -243,6 +191,7 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'module' => 'date',
           'settings' => array(
+            'conditions' => array(),
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
             'format_type' => 'short',
@@ -256,9 +205,19 @@ function monkey_events_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'module' => 'date',
+          'settings' => array(
+            'conditions' => array(),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'format_type' => 'short',
+            'fromto' => 'both',
+            'multiple_from' => '',
+            'multiple_number' => '',
+            'multiple_to' => '',
+          ),
+          'type' => 'date_default',
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'node',
@@ -326,6 +285,7 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'module' => 'text',
           'settings' => array(
+            'conditions' => array(),
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
           ),
@@ -333,10 +293,15 @@ function monkey_events_field_default_fields() {
           'weight' => '2',
         ),
         'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'conditions' => array(),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
+          'type' => 'text_default',
+          'weight' => '1',
         ),
       ),
       'entity_type' => 'node',
@@ -421,6 +386,7 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'module' => 'oembedfield',
           'settings' => array(
+            'conditions' => array(),
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
             'maxheight' => '',
@@ -433,7 +399,7 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '8',
         ),
       ),
       'entity_type' => 'node',
@@ -509,6 +475,7 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'module' => 'file',
           'settings' => array(
+            'conditions' => array(),
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
           ),
@@ -519,7 +486,7 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '7',
         ),
       ),
       'entity_type' => 'node',
@@ -574,7 +541,7 @@ function monkey_events_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -618,6 +585,15 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'module' => 'galleryformatter',
           'settings' => array(
+            'conditions' => array(
+              0 => array(
+                'condition' => 'hide_if_string',
+                'configuration' => array(
+                  'string' => '0',
+                  'target' => 'field_create_image_gallery',
+                ),
+              ),
+            ),
             'field_multiple_limit' => '-1',
             'field_multiple_limit_offset' => '0',
             'link_to_full' => 1,
@@ -635,7 +611,7 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '6',
         ),
       ),
       'entity_type' => 'node',
@@ -695,7 +671,138 @@ function monkey_events_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '6',
+        'weight' => '11',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-event-field_lead_image'.
+  $fields['node-event-field_lead_image'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_lead_image',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'event',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'conditions' => array(),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'image_link' => '',
+            'image_style' => 'medium',
+          ),
+          'type' => 'image',
+          'weight' => '0',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'conditions' => array(),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'image_link' => 'content',
+            'image_style' => 'thumbnail',
+          ),
+          'type' => 'image',
+          'weight' => '0',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_lead_image',
+      'label' => 'Lead image',
+      'required' => 1,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'filefield_sources' => array(
+            'filefield_sources' => array(
+              'attach' => 0,
+              'clipboard' => 'clipboard',
+              'plupload' => 0,
+              'reference' => 'reference',
+              'remote' => 'remote',
+            ),
+            'source_attach' => array(
+              'absolute' => '0',
+              'attach_mode' => 'move',
+              'path' => 'file_attach',
+            ),
+            'source_imce' => array(
+              'imce_mode' => 0,
+            ),
+            'source_reference' => array(
+              'autocomplete' => '1',
+            ),
+          ),
+          'insert' => 0,
+          'insert_absolute' => 0,
+          'insert_class' => '',
+          'insert_default' => 'auto',
+          'insert_styles' => array(
+            'auto' => 'auto',
+            'colorbox__galleryformatter_slide' => 0,
+            'colorbox__galleryformatter_thumb' => 0,
+            'colorbox__large' => 0,
+            'colorbox__medium' => 0,
+            'colorbox__thumbnail' => 0,
+            'icon_link' => 0,
+            'image' => 0,
+            'image_galleryformatter_slide' => 0,
+            'image_galleryformatter_thumb' => 0,
+            'image_large' => 0,
+            'image_medium' => 0,
+            'image_thumbnail' => 0,
+            'link' => 0,
+          ),
+          'insert_width' => '',
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '2',
       ),
     ),
   );
@@ -744,6 +851,7 @@ function monkey_events_field_default_fields() {
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(
+            'conditions' => array(),
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
           ),
@@ -752,9 +860,14 @@ function monkey_events_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'module' => 'taxonomy',
+          'settings' => array(
+            'conditions' => array(),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'node',
@@ -780,12 +893,13 @@ function monkey_events_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Cover');
+  t('Create image gallery');
   t('Date');
   t('External resources');
   t('External resources such as Youtube, Vimeo, Mixcloud etc. If possible, the links will be turned into appropriate players.');
   t('Files');
   t('Images');
+  t('Lead image');
   t('Press release');
   t('Tags');
 
