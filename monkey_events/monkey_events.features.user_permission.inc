@@ -46,15 +46,6 @@ function monkey_events_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
-  // Exported permission: override event authored on option.
-  $permissions['override event authored on option'] = array(
-    'name' => 'override event authored on option',
-    'roles' => array(
-      0 => 'authenticated user',
-    ),
-    'module' => 'override_node_options',
-  );
-
   // Exported permission: override event promote to front page option.
   $permissions['override event promote to front page option'] = array(
     'name' => 'override event promote to front page option',

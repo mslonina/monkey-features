@@ -20,25 +20,6 @@ function monkey_article_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
-  // Exported permission: override article authored by option.
-  $permissions['override article authored by option'] = array(
-    'name' => 'override article authored by option',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: override article authored on option.
-  $permissions['override article authored on option'] = array(
-    'name' => 'override article authored on option',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'authenticated user',
-    ),
-    'module' => 'override_node_options',
-  );
-
   // Exported permission: override article promote to front page option.
   $permissions['override article promote to front page option'] = array(
     'name' => 'override article promote to front page option',
