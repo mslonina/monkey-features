@@ -1,0 +1,8 @@
+name = Monkey Base
+description = Common things for Monkey Features
+core = 7.x
+package = Monkey Features
+php = 5.2.4
+version = 7.x-1.4
+project = monkey_base
+dependencies[] = features
