@@ -27,7 +27,7 @@ function monkey_events_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => '',
@@ -55,7 +55,7 @@ function monkey_events_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => '',
