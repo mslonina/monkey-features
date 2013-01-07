@@ -21,7 +21,7 @@ function monkey_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Files',
-    'weight' => '9',
+    'weight' => '10',
     'children' => array(
       0 => 'field_file',
     ),
@@ -49,7 +49,7 @@ function monkey_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Images',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_create_image_gallery',
       1 => 'field_image',

@@ -15,6 +15,7 @@ function monkey_events_user_default_permissions() {
     'name' => 'access jcaption settings',
     'roles' => array(
       0 => 'administrator',
+      1 => 'site editor',
     ),
     'module' => 'jcaption',
   );
@@ -24,6 +25,7 @@ function monkey_events_user_default_permissions() {
     'name' => 'administer oembed',
     'roles' => array(
       0 => 'administrator',
+      1 => 'site editor',
     ),
     'module' => 'oembedcore',
   );
@@ -31,7 +33,9 @@ function monkey_events_user_default_permissions() {
   // Exported permission: create artist content.
   $permissions['create artist content'] = array(
     'name' => 'create artist content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -47,7 +51,9 @@ function monkey_events_user_default_permissions() {
   // Exported permission: create venue content.
   $permissions['create venue content'] = array(
     'name' => 'create venue content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -77,7 +83,9 @@ function monkey_events_user_default_permissions() {
   // Exported permission: edit own artist content.
   $permissions['edit own artist content'] = array(
     'name' => 'edit own artist content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -93,7 +101,9 @@ function monkey_events_user_default_permissions() {
   // Exported permission: edit own venue content.
   $permissions['edit own venue content'] = array(
     'name' => 'edit own venue content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -137,18 +147,14 @@ function monkey_events_user_default_permissions() {
   // Exported permission: override event promote to front page option.
   $permissions['override event promote to front page option'] = array(
     'name' => 'override event promote to front page option',
-    'roles' => array(
-      0 => 'authenticated user',
-    ),
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
   // Exported permission: override event published option.
   $permissions['override event published option'] = array(
     'name' => 'override event published option',
-    'roles' => array(
-      0 => 'authenticated user',
-    ),
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
@@ -164,9 +170,7 @@ function monkey_events_user_default_permissions() {
   // Exported permission: override event sticky option.
   $permissions['override event sticky option'] = array(
     'name' => 'override event sticky option',
-    'roles' => array(
-      0 => 'authenticated user',
-    ),
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
