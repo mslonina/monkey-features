@@ -27,9 +27,29 @@ function monkey_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_place';
-  $strongarm->value = 'edit-workflow';
-  $export['additional_settings__active_tab_place'] = $strongarm;
+  $strongarm->name = 'additional_settings__active_tab_venue';
+  $strongarm->value = 'edit-submission';
+  $export['additional_settings__active_tab_venue'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__artist';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '5',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__artist'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -56,13 +76,20 @@ function monkey_events_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
       ),
       'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__venue';
+  $strongarm->value = array();
+  $export['field_bundle_settings_node__venue'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -81,9 +108,9 @@ function monkey_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_place';
+  $strongarm->name = 'language_content_type_venue';
   $strongarm->value = '0';
-  $export['language_content_type_place'] = $strongarm;
+  $export['language_content_type_venue'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -106,11 +133,11 @@ function monkey_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_place';
+  $strongarm->name = 'menu_options_venue';
   $strongarm->value = array(
     0 => 'main-menu',
   );
-  $export['menu_options_place'] = $strongarm;
+  $export['menu_options_venue'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -129,9 +156,9 @@ function monkey_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_place';
+  $strongarm->name = 'menu_parent_venue';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_place'] = $strongarm;
+  $export['menu_parent_venue'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -150,9 +177,9 @@ function monkey_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_place';
+  $strongarm->name = 'node_options_venue';
   $strongarm->value = array();
-  $export['node_options_place'] = $strongarm;
+  $export['node_options_venue'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -171,9 +198,9 @@ function monkey_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_place';
+  $strongarm->name = 'node_preview_venue';
   $strongarm->value = '0';
-  $export['node_preview_place'] = $strongarm;
+  $export['node_preview_venue'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -192,9 +219,9 @@ function monkey_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_place';
+  $strongarm->name = 'node_submitted_venue';
   $strongarm->value = 1;
-  $export['node_submitted_place'] = $strongarm;
+  $export['node_submitted_venue'] = $strongarm;
 
   return $export;
 }

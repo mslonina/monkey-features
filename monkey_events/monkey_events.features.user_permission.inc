@@ -44,9 +44,9 @@ function monkey_events_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create place content.
-  $permissions['create place content'] = array(
-    'name' => 'create place content',
+  // Exported permission: create venue content.
+  $permissions['create venue content'] = array(
+    'name' => 'create venue content',
     'roles' => array(),
     'module' => 'node',
   );
@@ -67,9 +67,9 @@ function monkey_events_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own place content.
-  $permissions['delete own place content'] = array(
-    'name' => 'delete own place content',
+  // Exported permission: delete own venue content.
+  $permissions['delete own venue content'] = array(
+    'name' => 'delete own venue content',
     'roles' => array(),
     'module' => 'node',
   );
@@ -90,9 +90,9 @@ function monkey_events_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own place content.
-  $permissions['edit own place content'] = array(
-    'name' => 'edit own place content',
+  // Exported permission: edit own venue content.
+  $permissions['edit own venue content'] = array(
+    'name' => 'edit own venue content',
     'roles' => array(),
     'module' => 'node',
   );
@@ -113,9 +113,9 @@ function monkey_events_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
-  // Exported permission: enter place revision log entry.
-  $permissions['enter place revision log entry'] = array(
-    'name' => 'enter place revision log entry',
+  // Exported permission: enter venue revision log entry.
+  $permissions['enter venue revision log entry'] = array(
+    'name' => 'enter venue revision log entry',
     'roles' => array(),
     'module' => 'override_node_options',
   );
@@ -170,16 +170,16 @@ function monkey_events_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
-  // Exported permission: override place published option.
-  $permissions['override place published option'] = array(
-    'name' => 'override place published option',
+  // Exported permission: override venue published option.
+  $permissions['override venue published option'] = array(
+    'name' => 'override venue published option',
     'roles' => array(),
     'module' => 'override_node_options',
   );
 
-  // Exported permission: override place revision option.
-  $permissions['override place revision option'] = array(
-    'name' => 'override place revision option',
+  // Exported permission: override venue revision option.
+  $permissions['override venue revision option'] = array(
+    'name' => 'override venue revision option',
     'roles' => array(),
     'module' => 'override_node_options',
   );

@@ -39,8 +39,8 @@ function monkey_events_node_info() {
       'title_label' => t('Title'),
       'help' => t('Before creating new event make sure your artist and place have proper profiles. If not, <a href="node/add/artist">add new artist</a>, <a href="node/add/place">add new place</a>.'),
     ),
-    'place' => array(
-      'name' => t('Place'),
+    'venue' => array(
+      'name' => t('Venue'),
       'base' => 'node_content',
       'description' => t('Use this content type to add place of an event'),
       'has_title' => '1',

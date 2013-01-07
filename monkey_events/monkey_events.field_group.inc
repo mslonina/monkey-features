@@ -21,18 +21,19 @@ function monkey_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Files',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_file',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Files',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $export['group_files|node|event|form'] = $field_group;
@@ -48,19 +49,20 @@ function monkey_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Images',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_create_image_gallery',
       1 => 'field_image',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Images',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $export['group_images|node|event|form'] = $field_group;
