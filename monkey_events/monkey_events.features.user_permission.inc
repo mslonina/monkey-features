@@ -10,12 +10,51 @@
 function monkey_events_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: access jcaption settings.
+  $permissions['access jcaption settings'] = array(
+    'name' => 'access jcaption settings',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'jcaption',
+  );
+
+  // Exported permission: administer oembed.
+  $permissions['administer oembed'] = array(
+    'name' => 'administer oembed',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'oembedcore',
+  );
+
+  // Exported permission: create artist content.
+  $permissions['create artist content'] = array(
+    'name' => 'create artist content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: create event content.
   $permissions['create event content'] = array(
     'name' => 'create event content',
     'roles' => array(
       0 => 'authenticated user',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: create place content.
+  $permissions['create place content'] = array(
+    'name' => 'create place content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own artist content.
+  $permissions['delete own artist content'] = array(
+    'name' => 'delete own artist content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -28,6 +67,20 @@ function monkey_events_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: delete own place content.
+  $permissions['delete own place content'] = array(
+    'name' => 'delete own place content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own artist content.
+  $permissions['edit own artist content'] = array(
+    'name' => 'edit own artist content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: edit own event content.
   $permissions['edit own event content'] = array(
     'name' => 'edit own event content',
@@ -37,12 +90,47 @@ function monkey_events_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: edit own place content.
+  $permissions['edit own place content'] = array(
+    'name' => 'edit own place content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: enter artist revision log entry.
+  $permissions['enter artist revision log entry'] = array(
+    'name' => 'enter artist revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: enter event revision log entry.
   $permissions['enter event revision log entry'] = array(
     'name' => 'enter event revision log entry',
     'roles' => array(
       0 => 'authenticated user',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: enter place revision log entry.
+  $permissions['enter place revision log entry'] = array(
+    'name' => 'enter place revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: override artist published option.
+  $permissions['override artist published option'] = array(
+    'name' => 'override artist published option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: override artist revision option.
+  $permissions['override artist revision option'] = array(
+    'name' => 'override artist revision option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
@@ -79,6 +167,20 @@ function monkey_events_user_default_permissions() {
     'roles' => array(
       0 => 'authenticated user',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: override place published option.
+  $permissions['override place published option'] = array(
+    'name' => 'override place published option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: override place revision option.
+  $permissions['override place revision option'] = array(
+    'name' => 'override place revision option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
